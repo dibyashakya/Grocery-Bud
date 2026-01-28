@@ -1,0 +1,38 @@
+.single-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.single-item p {
+  text-transform: capitalize;
+}
+
+.single-item input[type="checkbox"] {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.single-item .btn {
+  cursor: pointer;
+  background: gray;
+  color: lightblue;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.45rem;
+  border: transparent;
+  font-style: 1.5rem;
+}
+
+.single-item .btn:hover {
+  background: black;
+}
+
+.single-item .remove-btn {
+  background: gray;
+}
+
+.single-item .remove-btn:hover {
+  background: black;
+}
