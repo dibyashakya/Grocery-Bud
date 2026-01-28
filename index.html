@@ -19,40 +19,63 @@
   <body>
     <section class="section-center">
       <div id="app">
+        <form action="#">
+          <h2>Grocery</h2>
+          <div class="form-control">
+            <input type="text" class="form-input" placeholder="e.g., Rice" />
+            <button type="submit" class="btn">Add Item</button>
+          </div>
+        </form>
         <div class="items">
           <div class="single-item">
             <input type="checkbox" />
-            <p style="text-decoration: none">Milk</p>
+            <p>Milk</p>
             <button class="btn icon-btn edit-btn" type="button">
               <i class="fa-regular fa-pen-to-square"></i>
             </button>
-            <button class="btn icon-btn remove-btn" type="button">
+            <button
+              class="btn icon-btn remove-btn"
+              type="button"
+              onclick="console.log('delete')"
+            >
               <i class="fa-regular fa-trash-can"></i>
             </button>
           </div>
           <div class="single-item">
             <input type="checkbox" />
-            <p style="text-decoration: none">Butter</p>
+            <p>Butter</p>
             <button class="btn icon-btn edit-btn" type="button">
               <i class="fa-regular fa-pen-to-square"></i>
             </button>
-            <button class="btn icon-btn remove-btn">
+            <button
+              class="btn icon-btn remove-btn"
+              type="button"
+              onclick="console.log('delete')"
+            >
               <i class="fa-regular fa-trash-can"></i>
             </button>
           </div>
           <div class="single-item">
             <input type="checkbox" />
-            <p style="text-decoration: none">Rice</p>
+            <p>Rice</p>
             <button class="btn icon-btn edit-btn" type="button">
               <i class="fa-regular fa-pen-to-square"></i>
             </button>
-            <button class="btn icon-btn remove-btn" type="button">
+            <button
+              class="btn icon-btn remove-btn"
+              type="button"
+              onclick="console.log('delete')"
+            >
               <i class="fa-regular fa-trash-can"></i>
             </button>
           </div>
         </div>
       </div>
     </section>
-    <script></script>
+    <script
+      type="module"
+      src="js/app.js
+    "
+    ></script>
   </body>
 </html>

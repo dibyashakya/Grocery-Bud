@@ -2,7 +2,7 @@ export const groceryItems = [
   {
     id: "1",
     name: "Milk",
-    completed: false,
+    completed: true,
   },
   {
     id: "2",

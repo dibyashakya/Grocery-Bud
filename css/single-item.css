@@ -9,10 +9,11 @@
   text-transform: capitalize;
 }
 
-.single-item input[type="checkbox"] {
+.single-item input[type="checkbox"]:checked + p {
   cursor: pointer;
   width: 1rem;
   height: 1rem;
+  text-decoration: line-through;
 }
 
 .single-item .btn {
