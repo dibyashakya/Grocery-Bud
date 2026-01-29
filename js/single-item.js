@@ -12,7 +12,7 @@ export function createSingleItem(item) {
               <i class="fa-regular fa-trash-can"></i>
             </button>`;
   const checkbox = div.querySelector('input[type="checkbox"]');
-  checkbox.addEventListener(() => console.log("Click"));
+  checkbox.addEventListener("click", () => editCompleted(item.id));
 
   const removeBtn = div.querySelector(".remove-btn");
   removeBtn.addEventListener("click", () => removeItem(item.id));

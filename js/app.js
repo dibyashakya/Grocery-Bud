@@ -1,3 +1,4 @@
+console.log("APP JS LOADED");
 import { groceryItems } from "./data.js";
 import { createItems } from "./items.js";
 import { createForm } from "./form.js";
@@ -8,23 +9,14 @@ function render() {
   const app = document.getElementById("app");
   app.innerHTML = "";
 
-  const formElement = createForm(
-    editId,
-    editId ? items.find((item) => item.id === editId) : null,
-  );
+  const formElement = createForm();
   const itemsElement = createItems(items);
 
   app.appendChild(formElement);
   app.appendChild(itemsElement);
 }
 
-function getLocalStorage() {
-  const list = localStorage.getItem("grocery-list");
-  if (list) {
-  }
-}
-
-// render();
+render();
 
 export function editCompleted(itemId) {
   items = items.map((item) => {
@@ -55,27 +47,4 @@ export function addItem(itemName) {
   items = [...items, newItem];
   render();
   setTimeout(() => alert("Item Added!"));
-}
-
-export function updateItemName(newName) {
-  items = items.map((item) => {
-    if (item.id === editId) {
-      return { ...item, name: newName };
-    }
-    return item;
-  });
-  editId = null;
-  render();
-  setTimeout(() => alert("Item Updated"));
-}
-
-export function setEditId(itemId) {
-  editId = itemId;
-  render();
-  setTimeout(() => {
-    const input = document.querySelector(".form-input");
-    if (input) {
-      input.focus();
-    }
-  }, 0);
 }
